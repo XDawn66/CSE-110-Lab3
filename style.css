@@ -1,0 +1,42 @@
+:root {
+  --main-color: #bb9a68;
+  --secondary-color: #ed8f03;
+  --tertiary-color: #25d6a7;
+  --quaternary-color: #291b07;
+  --quinary-color: #d43a26;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+nav {
+  background-color: rgb(198, 218, 178);
+  color: darkslateblue;
+  padding: 2vw;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: color-mix(in srgb, green 30%, white 70%);
+}
+
+p {
+  text-align: center;
+  color: #c79a57;
+  font-size: 1.5vw;
+}
+
+li {
+  color: var(--quaternary-color);
+  padding: 0.5vw;
+}
+
+button {
+  background-color: hsl(107, 45%, 76%);
+}
+
+form {
+  background-color: color(srgb 2 3 0.2 / 0.3);
+}
