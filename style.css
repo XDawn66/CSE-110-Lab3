@@ -37,6 +37,11 @@ li a {
   text-decoration: none;
 }
 
+li:has(> a.active) {
+  color: var(--quaternary-color);
+  font-weight: bold;
+}
+
 h1,
 h2 {
   color: darkslateblue;
@@ -77,11 +82,6 @@ a:active {
   color: var(--quinary-color);
   font-size: 2vw;
   font-weight: bold;
-}
-
-button:hover {
-  color: #ed8f03;
-  cursor: pointer;
 }
 
 img {
@@ -126,7 +126,7 @@ form {
   height: 20vh;
 }
 
-.fields {
+div.fields {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -142,7 +142,7 @@ fieldset {
   }
 
   h2,
-  summary strong,
+  summary >,
   summary,
   h1 b {
     font-size: 3rem; /* Increase size of h2 */
@@ -154,19 +154,15 @@ fieldset {
   label,
   option,
   .links li a,
-  span strong,
-  h2 i,
-  h2 em,
+  span >,
+  h2 >,
   legend,
   select,
   .split-contact,
   a {
-    font-size: 2rem; /* Increase size of h3 */
+    font-size: 2rem;
   }
 
-  p b {
-    font-size: 1.5rem; /* Increase size of p */
-  }
   body {
     font-size: 30px;
   }
@@ -182,6 +178,10 @@ fieldset {
   button {
     font-size: 5vw;
     padding: 5vw;
+    &:hover {
+      background-color: #ed8f03;
+      cursor: pointer;
+    }
   }
 
   img {
@@ -193,4 +193,15 @@ fieldset {
 button[type="submit"] {
   display: block;
   margin: 20px auto;
+}
+
+h1 + h2 {
+  font-size: 1rem;
+  color: #25d6a7;
+}
+
+h2 ~ audio,
+h2 ~ video {
+  background-color: var(--secondary-color);
+  padding: 10px;
 }
