@@ -6,37 +6,191 @@
   --quinary-color: #d43a26;
 }
 
+* {
+  font-size: 2vw;
+}
+
 body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: auto;
   background-color: antiquewhite;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 nav {
+  position: relative;
   background-color: rgb(198, 218, 178);
-  color: darkslateblue;
+  color: color-mix(in srgb, green 30%, white 70%);
   padding: 2vw;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1vw;
+  padding: 0.5vw;
+  font-size: 1vw;
+}
+
+li a {
+  text-decoration: none;
 }
 
 h1,
 h2 {
-  text-align: center;
-  color: color-mix(in srgb, green 30%, white 70%);
+  color: darkslateblue;
 }
 
 p {
-  text-align: center;
+  font-size: small;
+  text-align: justify;
   color: #c79a57;
   font-size: 1.5vw;
+  margin: 0 0 0 0.5vw;
 }
 
 li {
   color: var(--quaternary-color);
-  padding: 0.5vw;
+  padding: 0 0.5vw 0 0.5vw;
 }
 
 button {
+  border: 2 px solid var(--main-color);
+  border-radius: 5px;
+  padding: 2vw;
+  margin-top: 1vh;
+  margin-bottom: 0.2vh;
+  margin-right: auto;
+  margin-left: 1vw;
+
   background-color: hsl(107, 45%, 76%);
 }
 
 form {
+  display: flex;
+  justify-content: center;
   background-color: color(srgb 2 3 0.2 / 0.3);
+}
+
+a:active {
+  color: var(--quinary-color);
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+button:hover {
+  color: #ed8f03;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 30vw;
+  max-height: 30vh;
+  margin: 0.2in;
+}
+
+.meeting-images {
+  border: 2px;
+  border-style: solid;
+  border-color: var(--main-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+summary {
+  margin-top: 0.5cm;
+  text-decoration: underline;
+}
+
+details {
+  padding: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+#message {
+  width: 50vw;
+  height: 20vh;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+fieldset {
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 36px; /* Increase font size */
+  }
+
+  h2,
+  summary strong,
+  summary,
+  h1 b {
+    font-size: 3rem; /* Increase size of h2 */
+  }
+
+  h3,
+  span,
+  details,
+  label,
+  option,
+  .links li a,
+  span strong,
+  h2 i,
+  h2 em,
+  legend,
+  select,
+  .split-contact,
+  a {
+    font-size: 2rem; /* Increase size of h3 */
+  }
+
+  p b {
+    font-size: 1.5rem; /* Increase size of p */
+  }
+  body {
+    font-size: 30px;
+  }
+
+  li {
+    font-size: 5vw;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+
+  button {
+    font-size: 5vw;
+    padding: 5vw;
+  }
+
+  img {
+    max-width: 80%;
+    max-height: 50vh;
+  }
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 20px auto;
 }

@@ -10,7 +10,7 @@
 <body>
     <nav id="nav">
         <ul class="links">
-          <li ><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="index.html">Contact</a></li>
         </ul>
       </nav>
@@ -50,16 +50,17 @@
     </ul>
 
    
-
-    <picture>
-        <img src="img/p1.webp" alt="Meeting Image" width = "500">
-    </picture>
-    <picture>
-        <img src = "img/p2.png" alt="Meeting Image2" width = "400">
-    </picture>
-    <picture>
-        <img src = "img/p3.webp" alt="Meeting Image3" width = "500">
-    </picture>
+    <section class="meeting-images">
+      <picture>
+          <img src="img/p1.webp" alt="Meeting Image" width = "500">
+      </picture>
+      <picture>
+          <img src = "img/p2.png" alt="Meeting Image2" width = "400">
+      </picture>
+      <picture>
+          <img src = "img/p3.webp" alt="Meeting Image3" width = "500">
+      </picture>
+    </section>
 
     <h2>Audio Record</h2>
     <audio controls>
@@ -70,7 +71,7 @@
     <video width="480" controls>
         <source src="video/ibot.mov" type="video/mp4">
     </video>
-    <details>
+    <details class="summary">
     <summary><strong>Concerns:</strong></summary>
     <ul>
         <li>The CEO showed budget constraints</li>
@@ -124,7 +125,7 @@
         <fieldset>
           <legend>Your Message</legend>
           <div class="field">
-            <label for="message">Message</label>
+
             <textarea id = "message"
               name="message"
             ></textarea>
