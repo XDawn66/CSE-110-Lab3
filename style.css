@@ -22,7 +22,7 @@ body {
 nav {
   position: relative;
   background-color: rgb(198, 218, 178);
-  color: color-mix(srgb, green 30%, white 70%);
+  color: color-mix(in srgb, green 30%, white 70%);
   padding: 2vw;
 }
 
@@ -61,7 +61,7 @@ li {
 }
 
 button {
-  border: 2 px solid #bb9a68;
+  border: 2px solid #bb9a68;
   border-radius: 5px;
   padding: 2vw;
   margin-top: 1vh;
