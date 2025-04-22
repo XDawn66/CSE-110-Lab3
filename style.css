@@ -22,7 +22,7 @@ body {
 nav {
   position: relative;
   background-color: rgb(198, 218, 178);
-  color: color-mix(srgb, green 30%, white 70%);
+  color: color-mix(in srgb, green 30%, white 70%);
   padding: 2vw;
 }
 
